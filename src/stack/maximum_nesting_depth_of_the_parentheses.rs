@@ -2,17 +2,16 @@
 pub struct Solution {}
 impl Solution {
     pub fn max_depth(s: String) -> i32 {
-        let mut balance =0;
-        balance.max()
-        let mut max_depth =0;
-        for char in s.chars(){
+        let mut balance = 0;
+        let mut max_depth = 0;
+        for char in s.chars() {
             match char {
-                '(' => balance +=1,
+                '(' => balance += 1,
                 ')' => balance -= 1,
                 _ => continue,
             }
-            if balance > max_depth{
-                max_depth= balance
+            if balance > max_depth {
+                max_depth = balance
             }
         }
 
