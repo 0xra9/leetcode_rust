@@ -9,7 +9,7 @@ impl Solution {
         // looping through the argument String character by character
         for char in s.chars() {
             match char {
-                '{'  => stack.push('}'),
+                '{' => stack.push('}'),
                 '(' => stack.push(')'),
                 '[' => stack.push(']'),
                 // stack.pop() returns Option , so we must use Some to get the value from the option.
@@ -27,7 +27,7 @@ mod tests {
 
     #[test]
     fn max_nested_vps_depth() {
-        let test_case = String::from("([)]");
+        let test_case = String::from("([])");
         let ans = Solution::is_valid(test_case);
         assert_eq!(ans, true);
     }

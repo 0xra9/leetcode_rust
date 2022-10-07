@@ -1,5 +1,6 @@
 extern crate core;
 
+mod array;
 mod stack;
 
 pub fn add(left: usize, right: usize) -> usize {
